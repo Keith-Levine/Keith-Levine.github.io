@@ -20,19 +20,44 @@ h1 {
 .yellow-square {
     background-color: yellow;
     border-radius: 25%;
+    box-shadow: 5px 5px 5px grey;
+    border-style: dotted;
+    border-color: grey;
 }
 
 .red-square {
     background-color: red;
     border-radius: 25%;
+    box-shadow: 5px 5px 5px grey;
+    border-style: dotted;
+    border-color: grey;
 }
 
 .blue-square {
     background-color: blue;
     border-radius: 25%;
+    box-shadow: 5px 5px 5px grey;
+    border-style: dotted;
+    border-color: grey;
 }
 
 .green-square {
     background-color: green;
     border-radius: 25%;
+    box-shadow: 5px 5px 5px grey;
+    border-style: dotted;
+    border-color: grey;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+    height: 50px;
+}
+
+button {
+    font-size: 20px;
+    background-color: indianred;
+    border-radius: 40%;
 }
