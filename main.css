@@ -49,25 +49,27 @@ h1 {
     border-color: grey;
 }
 
+h4 {
+    display: flex;
+    justify-content: center; 
+}
+
 .users {
     display: grid;
     position: relative;
     justify-content: center;
-    padding-top: 30px;
     grid-template-columns: 150px 150px;
 }
 
 .player {
     border-style: solid;
     border-color: black;
-    margin-top: 20px;
     text-align: center;
 }
 
 .computer {
     border-style: solid;
     border-color: black;
-    margin-top: 20px;
     text-align: center;
 }
 
