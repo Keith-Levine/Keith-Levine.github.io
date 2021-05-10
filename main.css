@@ -10,9 +10,9 @@ h1 {
 
 .game-buttons {
     display: grid;
-    grid-template-rows: 180px 180px;
-    grid-template-columns: 180px 180px;
-    grid-gap: 25px;
+    grid-template-rows: 200px 200px;
+    grid-template-columns: 200px 200px;
+    grid-gap: 20px;
     position: relative;
     justify-content: center;
 }
