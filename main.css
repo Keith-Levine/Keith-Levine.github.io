@@ -1,0 +1,38 @@
+body {
+    background-color: aqua;
+
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+}
+
+.game-buttons {
+    display: grid;
+    grid-template-rows: 180px 180px;
+    grid-template-columns: 180px 180px;
+    grid-gap: 25px;
+    position: relative;
+    justify-content: center;
+}
+
+.yellow-square {
+    background-color: yellow;
+    border-radius: 25%;
+}
+
+.red-square {
+    background-color: red;
+    border-radius: 25%;
+}
+
+.blue-square {
+    background-color: blue;
+    border-radius: 25%;
+}
+
+.green-square {
+    background-color: green;
+    border-radius: 25%;
+}
