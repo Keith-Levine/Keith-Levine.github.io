@@ -9,6 +9,10 @@ const redButton = document.querySelector('.red-square');
 const blueButton = document.querySelector('.blue-square');
 const greenButton = document.querySelector('.green-square');
 // const gameButtons = ['yellow-square', 'red-square', 'blue-square', 'green-square']
+const squares = [document.getElementById('red'),
+                document.getElementById('blue'),
+                document.getElementById('green'),
+                document.getElementById('yellow')]
 
 // create computer turn array
 // create a human turn array
@@ -27,11 +31,12 @@ function randomButtonPicker() {
     ];
     const randomColor = gameButtons[Math.floor(Math.random() * gameButtons.length)];
     // console.log(randomColor);
+    return randomColor
 };
 
 // activating the buttons for the user to see
 function activateButton(color) {
-    const button = document.querySelector(`[${color}]`);
+    const button = document.querySelector(`id=${color}`);
 
     button.classList.add('activated');
 
