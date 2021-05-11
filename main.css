@@ -24,7 +24,7 @@ h1 {
     border-style: dotted;
     border-color: grey;
 }
-
+.yellow-square:active,
 .yellow-square.activated {
     background-color: grey;
 }
@@ -37,6 +37,7 @@ h1 {
     border-color: grey;
 }
 
+.red-square:active,
 .red-square.activated {
     background-color: grey;
 }
@@ -49,6 +50,7 @@ h1 {
     border-color: grey;
 }
 
+.blue-square:active,
 .blue-square.activated {
     background-color: grey;
 }
@@ -60,7 +62,7 @@ h1 {
     border-style: dotted;
     border-color: grey;
 }
-
+.green-square:active,
 .green-square.activated {
     background-color: grey;
 }

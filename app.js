@@ -26,39 +26,41 @@ function randomButtonPicker() {
         document.querySelector('.green-square')
     ];
     const randomColor = gameButtons[Math.floor(Math.random() * gameButtons.length)];
-    console.log(randomColor);
-}
+    // console.log(randomColor);
+};
 
 // activating the buttons for the user to see
 function activateButton(color) {
-    const button = document.querySelector(`[id='${color}']`)
+    const button = document.querySelector(`[id='${color}']`);
 
     button.classList.add('activated');
 
     setTimeout(() => {
-        tile.classList.remove('activated');
+        button.classList.remove('activated');
       }, 500);
-}
+};
 
 // iterating over the computerTurn array
 function showRound(nextComputerTurn) {
     nextComputerTurn.forEach((color, index) => {
+        // adding delay so buttons are pressed sequentially
         setTimeout(() => {
-          activateTile(color);
-        }, (index + 1) * 600);
+          activateButton(color);
+        }, (index + 1) * 500);
       });
-}
+};
 
 // adding a level, and an additional button push
 function nextLevel() {
     level += 1;
     const nextComputerTurn = [...computerTurn];
     nextComputerTurn.push(randomButtonPicker());
-}
+    showRound(nextComputerTurn);
+};
 
 // beginning the game
 function startGame() {
-    nextLevel()
+    nextLevel();
 };
 // event listener to begin game with start button
 startButton.addEventListener('click', startGame);
