@@ -18,21 +18,27 @@ let playerTurn = [];
 let level = 0;
 
 function randomButtonPicker() {
-    const gameButtons = ['yellow-square', 'red-square', 'blue-square', 'green-square'];
+    const gameButtons = [
+        document.querySelector('.yellow-square'), 
+        document.querySelector('.red-square'), 
+        document.querySelector('.blue-square'), 
+        document.querySelector('.green-square')
+    ];
     const randomColor = gameButtons[Math.floor(Math.random() * gameButtons.length)];
     console.log(randomColor);
 }
 
 function nextLevel() {
     level += 1;
-    const nextComputerTurn = [...computerTurn]
-    nextComputerTurn.push(randomButtonPicker)
+    const nextComputerTurn = [...computerTurn];
+    nextComputerTurn.push(randomButtonPicker());
 }
 
 function startGame() {
-    console.log('start')
+    nextLevel()
 };
 
 startButton.addEventListener('click', startGame);
 
-randomButtonPicker()
+// nextLevel()
+// console.log(computerTurn)
