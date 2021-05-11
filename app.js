@@ -1,5 +1,5 @@
 // decalre my variables
-const startButton = document.querySelector('.button1');
+const startButton = document.querySelector('#button1');
 
 const computerTurnIndicator = document.querySelector('.computer');
 const playerTurnIndicator = document.querySelector('.player');
@@ -31,7 +31,7 @@ function randomButtonPicker() {
 
 // activating the buttons for the user to see
 function activateButton(color) {
-    const button = document.querySelector(`[id='${color}']`);
+    const button = document.querySelector(`[${color}]`);
 
     button.classList.add('activated');
 
