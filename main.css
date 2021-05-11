@@ -67,15 +67,16 @@ h1 {
     background-color: grey;
 }
 
-h4 {
+/* h4 {
     display: flex;
     justify-content: center; 
-}
+} */
 
 .users {
     display: grid;
     position: relative;
     justify-content: center;
+    padding-top: 20px;
     grid-template-columns: 150px 150px;
 }
 

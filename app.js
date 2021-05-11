@@ -23,12 +23,7 @@ let level = 0;
 
 // randomizing the button selection
 function randomButtonPicker() {
-    const gameButtons = [
-        document.querySelector('.yellow-square'), 
-        document.querySelector('.red-square'), 
-        document.querySelector('.blue-square'), 
-        document.querySelector('.green-square')
-    ];
+    const gameButtons = ['red', 'green', 'blue', 'yellow'];
     const randomColor = gameButtons[Math.floor(Math.random() * gameButtons.length)];
     // console.log(randomColor);
     return randomColor
@@ -36,7 +31,7 @@ function randomButtonPicker() {
 
 // activating the buttons for the user to see
 function activateButton(color) {
-    const button = document.querySelector(`id=${color}`);
+    const button = document.getElementById(`${color}`);
 
     button.classList.add('activated');
 
