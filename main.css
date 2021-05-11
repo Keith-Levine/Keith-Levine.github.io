@@ -25,12 +25,20 @@ h1 {
     border-color: grey;
 }
 
+.yellow-square.activated {
+    background-color: grey;
+}
+
 .red-square {
     background-color: red;
     border-radius: 25%;
     box-shadow: 5px 5px 5px grey;
     border-style: dotted;
     border-color: grey;
+}
+
+.red-square.activated {
+    background-color: grey;
 }
 
 .blue-square {
@@ -41,12 +49,20 @@ h1 {
     border-color: grey;
 }
 
+.blue-square.activated {
+    background-color: grey;
+}
+
 .green-square {
     background-color: green;
     border-radius: 25%;
     box-shadow: 5px 5px 5px grey;
     border-style: dotted;
     border-color: grey;
+}
+
+.green-square.activated {
+    background-color: grey;
 }
 
 h4 {
