@@ -16,14 +16,43 @@ const allButtons = document.querySelector('.game-buttons')
 let computerTurn = [];
 let playerTurn = [];
 let level = 0;
+// let rounds = 0;
 
-// randomizing the button selection
-function randomButtonPicker() {
-    const gameButtons = ['red', 'green', 'blue', 'yellow'];
-    const randomColor = gameButtons[Math.floor(Math.random() * gameButtons.length)];
-    // console.log(randomColor);
-    return randomColor
+// function to restart the game
+function restartGame(text) {
+    alert(text);
+    computerTurn = [];
+    playerTurn = [];
+    level = 0;
 };
+
+// adding to player's array
+function addColors(evt) {
+    console.log(evt)
+    playerTurn.push(evt.target.id)
+    console.log(playerTurn)
+}
+
+// record users clicks
+function playersTurn() {
+
+    // const index = playerTurn.push(button) - 1;
+
+
+    // if (playerTurn[index] !== computerTurn[index]) {
+    //     restartGame();
+    //     return;
+    //   }
+
+    if (playerTurn.length === computerTurn.length) {
+        playerTurn = [];
+        setTimeout(() => {
+          nextLevel();
+        }, 1000);
+        return;
+      }
+};
+
 
 // activating the buttons for the user to see
 function activateButton(color) {
@@ -46,36 +75,53 @@ function showRound(nextComputerTurn) {
       });
 };
 
-// indicating it's time for player to go
-function playersTurn(level) {
-    // console.log('your turn')
-}
+// randomizing the button selection
+function randomButtonPicker() {
+    const gameButtons = ['red', 'green', 'blue', 'yellow'];
+    const randomColor = gameButtons[Math.floor(Math.random() * gameButtons.length)];
+    // console.log(randomColor);
+    return randomColor
+};
 
 // adding a level, and an additional button push
 function nextLevel() {
     level += 1;
+
     const nextComputerTurn = [...computerTurn];
     nextComputerTurn.push(randomButtonPicker());
     showRound(nextComputerTurn);
 
     computerTurn = [...nextComputerTurn]
-    setTimeout(() => {
-        playersTurn(level);
-      }, level * 600 + 1000);
+    // setTimeout(() => {
+    //     playersTurn();
+    //   }, level * 600 + 1000);
 };
 
-// record users clicks and compare to computer's turn
-function recordClick(button) {
-    const index = playerTurn.push(button) - 1;
+// function compareTurns() {
+//     if (computerTurn === playerTurn) {
+//         nextLevel()
+//     }
+// }
 
-    if (playerTurn.length === computerTurn.length) {
-        playerTurn = [];
-        setTimeout(() => {
-          nextRound();
-        }, 1000);
-        return;
-      }
-}
+
+// function recordClick(button) {
+//     const index = playerTurn.push(button) - 1;
+
+//     if (playerTurn[index] !== computerTurn[index]) {
+//         restartGame();
+//         return;
+//       }
+
+//     if (playerTurn.length === computerTurn.length) {
+//         playerTurn = [];
+//         setTimeout(() => {
+//           nextLevel();
+//         }, 1000);
+//         return;
+//       }
+// };
+
+
 
 // beginning the game
 function startGame() {
@@ -85,8 +131,10 @@ function startGame() {
 startButton.addEventListener('click', startGame);
 
 // adding event listeners for squares
-allButtons.addEventListener('click', event => {
-    const { button } = event.target.dataset;
-
-    if (button) recordClick(button);
+allButtons.addEventListener('click', evt => {
+    // let { button } = evt.currentTarget.id;
+    console.log(evt)
+    addColors(evt);
 });
+
+// console.log(allButtons)
