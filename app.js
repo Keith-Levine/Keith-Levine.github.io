@@ -9,11 +9,7 @@ const redButton = document.querySelector('.red-square');
 const blueButton = document.querySelector('.blue-square');
 const greenButton = document.querySelector('.green-square');
 // const gameButtons = ['yellow-square', 'red-square', 'blue-square', 'green-square']
-const squares = [document.getElementById('red'),
-                document.getElementById('blue'),
-                document.getElementById('green'),
-                document.getElementById('yellow')]
-
+const allButtons = document.querySelector('.game-buttons')
 // create computer turn array
 // create a human turn array
 
@@ -50,13 +46,36 @@ function showRound(nextComputerTurn) {
       });
 };
 
+// indicating it's time for player to go
+function playersTurn(level) {
+    // console.log('your turn')
+}
+
 // adding a level, and an additional button push
 function nextLevel() {
     level += 1;
     const nextComputerTurn = [...computerTurn];
     nextComputerTurn.push(randomButtonPicker());
     showRound(nextComputerTurn);
+
+    computerTurn = [...nextComputerTurn]
+    setTimeout(() => {
+        playersTurn(level);
+      }, level * 600 + 1000);
 };
+
+// record users clicks and compare to computer's turn
+function recordClick(button) {
+    const index = playerTurn.push(button) - 1;
+
+    if (playerTurn.length === computerTurn.length) {
+        playerTurn = [];
+        setTimeout(() => {
+          nextRound();
+        }, 1000);
+        return;
+      }
+}
 
 // beginning the game
 function startGame() {
@@ -65,5 +84,9 @@ function startGame() {
 // event listener to begin game with start button
 startButton.addEventListener('click', startGame);
 
-// nextLevel()
-// console.log(computerTurn)
+// adding event listeners for squares
+allButtons.addEventListener('click', event => {
+    const { button } = event.target.dataset;
+
+    if (button) recordClick(button);
+});
