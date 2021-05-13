@@ -43,7 +43,7 @@ function compare() {
             return;
         }
         else if (playerMoves.length === computerMoves.length) {
-            if (playerMoves.length === 10) {
+            if (playerMoves.length === 5) {
                 restartGame('You Win!');
             }
             else {setTimeout(() => {
