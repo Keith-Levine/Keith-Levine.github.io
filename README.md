@@ -4,7 +4,7 @@ General Assembly Project #1
 
 <h2>Overview</h2>
 
-The objective of this project was to use our skills in HTML, CSS, and JavaScript to create a game that uses DOM manipulation. 
+The objective of this project was to use our skills in HTML, CSS, and JavaScript to create a game that using DOM manipulation. 
 
 <h2>User Stories</h2>
 
@@ -17,5 +17,7 @@ As a user, I should be able to play my turn after the computer finishes
 As a user, I should know when the game ends by recieving an alert (win/lose)
 
 As a user, I should be able to restart the game after it ends
+
+<h2>Game Link</h2>
 
 [Simon Game](https://keith-levine.github.io/)
