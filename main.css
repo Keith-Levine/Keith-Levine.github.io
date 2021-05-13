@@ -8,6 +8,10 @@ h1 {
     justify-content: center;
 }
 
+.hidden {
+    display: none !important;
+}
+
 .game-buttons {
     display: grid;
     grid-template-rows: 200px 200px;
@@ -104,3 +108,4 @@ button {
     background-color: indianred;
     border-radius: 40%;
 }
+

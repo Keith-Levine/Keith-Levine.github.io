@@ -1,6 +1,7 @@
 // declare my variables
 const startButton = document.querySelector('#button1');
 const allButtons = document.querySelector('.game-buttons');
+const info = document.querySelector('.instructions');
 
 // create computer turn array
 let computerTurn = [];
@@ -13,10 +14,17 @@ let level = 0;
 // function to restart the game
 function restartGame(text) {
     alert(text);
+    startButton.classList.remove('hidden');
+    info.classList.add('hidden');
     computerTurn = [];
     playerTurn = [];
     level = 0;
 };
+
+// signaling the player's turn to click
+function playerSignal() {
+    info.textContent = `Level ${level}: Click ${level}x`;
+}
 
 // adding to player's array
 function addColors(evt) {
@@ -53,6 +61,10 @@ function activateButton(color) {
     setTimeout(() => {
         button.classList.remove('activated');
       }, 500);
+      setTimeout(() => {
+        playerSignal();
+      }, 1500);
+    
 };
 
 // iterating over the computerTurn array
@@ -77,6 +89,9 @@ function randomButtonPicker() {
 function nextLevel() {
     level += 1;
 
+    info.classList.remove('hidden');
+    info.textContent = 'Watch';
+
     playerTurn = [];
     const nextComputerTurn = [...computerTurn];
     nextComputerTurn.push(randomButtonPicker());
@@ -87,6 +102,7 @@ function nextLevel() {
 
 // beginning the game
 function startGame() {
+    startButton.classList.add('hidden');
     nextLevel();
 };
 
