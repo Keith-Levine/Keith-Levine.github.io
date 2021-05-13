@@ -15,7 +15,7 @@ let level = 0;
 function restartGame(text) {
     alert(text);
     startButton.classList.remove('hidden');
-    info.classList.add('hidden');
+    info.classList.add('hidden'); 
     computerTurn = [];
     playerTurn = [];
     level = 0;
@@ -23,7 +23,7 @@ function restartGame(text) {
 
 // signaling the player's turn to click
 function playerSignal() {
-    info.textContent = `Level ${level}: Click ${level}x`;
+    info.textContent = `Level ${level}: ${level} click(s)`;
 }
 
 // adding to player's array
@@ -61,7 +61,7 @@ function activateButton(color) {
     setTimeout(() => {
         button.classList.remove('activated');
       }, 500);
-      setTimeout(() => {
+    setTimeout(() => {
         playerSignal();
       }, 1500);
     
