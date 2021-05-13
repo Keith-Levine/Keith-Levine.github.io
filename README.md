@@ -1,8 +1,8 @@
-Simon JavaScript Game
+<h1>Simon JavaScript Game</h1>
 
 General Assembly Project #1
 
-<u>User Stories</u>
+User Stories
 
 As a user, I should be able to start the game
 
