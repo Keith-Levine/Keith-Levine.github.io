@@ -2,6 +2,7 @@
 const startButton = document.querySelector('#startButton');
 const allButtons = document.querySelector('.game-buttons');
 const info = document.querySelector('.instructions');
+const timeIntervalOfOneMove = 500
 
 // create computer turn array
 let computerMoves = [];
@@ -44,37 +45,36 @@ function compare() {
                 restartGame('You Win!');
             }
             else {setTimeout(() => {
-              nextLevel();
+                nextLevel();
             }, 1000);
             return;
         };
     };
 };
 
-
 // activating the buttons for the user to see
 function activateButton(color) {
     const button = document.getElementById(`${color}`);
-
+// play sound
     button.classList.add('activated');
 
     setTimeout(() => {
         button.classList.remove('activated');
-      }, 500);
-    setTimeout(() => {
-        playerSignal();
-      }, 1500);
-    
+      }, timeIntervalOfOneMove);
 };
 
 // iterating over the computerMoves array
-function showRound(nextcomputerMoves) {
-    nextcomputerMoves.forEach((color, index) => {
+function showRound(nextComputerMoves) {
+    nextComputerMoves.forEach((color, index) => {
         // adding delay so buttons are pressed sequentially
         setTimeout(() => {
           activateButton(color);
-        }, (index + 1) * 500);
-      });
+        }, (index + 1) * timeIntervalOfOneMove);
+    });
+    const numberOfMoves = nextComputerMoves.length + 1
+    setTimeout(() => {
+        playerSignal();
+    }, (numberOfMoves * timeIntervalOfOneMove));
 };
 
 // computerMoves Logic
@@ -93,11 +93,11 @@ function nextLevel() {
     info.textContent = 'Watch';
 
     playerMoves = [];
-    const nextcomputerMoves = [...computerMoves];
-    nextcomputerMoves.push(randomButtonPicker());
-    showRound(nextcomputerMoves);
+    const nextComputerMoves = [...computerMoves];
+    nextComputerMoves.push(randomButtonPicker());
+    showRound(nextComputerMoves);
 
-    computerMoves = [...nextcomputerMoves];
+    computerMoves = [...nextComputerMoves];
 };
 
 // beginning the game
