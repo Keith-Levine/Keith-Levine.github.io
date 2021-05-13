@@ -1,6 +1,7 @@
 body {
     background-color: aqua;
-
+    
+    
 }
 
 header {
@@ -23,6 +24,9 @@ h1 {
     grid-gap: 20px;
     position: relative;
     justify-content: center;
+    background-image: url(https://is5-ssl.mzstatic.com/image/thumb/Purple128/v4/37/3c/42/373c4288-94b4-1d2d-ce5a-c9bdaae75d4e/source/512x512bb.jpg);
+    background-size: contain;
+    background-position: center;
 }
 
 .yellow-square {

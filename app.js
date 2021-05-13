@@ -20,6 +20,8 @@ function restartGame(text) {
     computerMoves = [];
     playerMoves = [];
     level = 0;
+    
+
 };
 
 // signaling the player's turn to click
@@ -38,7 +40,9 @@ function addColors(evt) {
 // record users clicks
 function compare() {
         const index = playerMoves.push() - 1;
+        const sound = document.getElementById('end')
         if (playerMoves[index] !== computerMoves[index]) {
+            sound.play();
             restartGame('GAME OVER!!');
             return;
         }
