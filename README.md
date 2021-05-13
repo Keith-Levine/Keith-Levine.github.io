@@ -2,6 +2,8 @@ Simon JavaScript Game
 
 General Assembly Project #1
 
+<u>User Stories</u>
+
 As a user, I should be able to start the game
 
 As a user, I should be able to watch the computer's turn
