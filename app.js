@@ -2,7 +2,7 @@
 const startButton = document.querySelector('#startButton');
 const allButtons = document.querySelector('.game-buttons');
 const info = document.querySelector('.instructions');
-const timeIntervalOfOneMove = 750
+const timeIntervalOfOneMove = 1000
 
 // create computer turn array
 let computerMoves = [];
@@ -48,7 +48,7 @@ function compare() {
             }
             else {setTimeout(() => {
                 nextLevel();
-            }, 1000);
+            }, timeIntervalOfOneMove);
             return;
         };
     };

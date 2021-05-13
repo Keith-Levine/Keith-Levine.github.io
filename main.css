@@ -3,6 +3,10 @@ body {
 
 }
 
+header {
+    background-color: rgb(226, 183, 43);
+}
+
 h1 {
     display: flex;
     justify-content: center;
@@ -25,8 +29,7 @@ h1 {
     background-color: yellow;
     border-radius: 25%;
     box-shadow: 5px 5px 5px grey;
-    border-style: dotted;
-    border-color: grey;
+    border: 2px solid #b8f00f;
 }
 
 .yellow-square:active,
@@ -38,8 +41,7 @@ h1 {
     background-color: red;
     border-radius: 25%;
     box-shadow: 5px 5px 5px grey;
-    border-style: dotted;
-    border-color: grey;
+    border: 2px solid #e01111;
 }
 
 .red-square:active,
@@ -51,8 +53,7 @@ h1 {
     background-color: blue;
     border-radius: 25%;
     box-shadow: 5px 5px 5px grey;
-    border-style: dotted;
-    border-color: grey;
+    border: 2px solid #2917d1;
 }
 
 .blue-square:active,
@@ -64,8 +65,7 @@ h1 {
     background-color: green;
     border-radius: 25%;
     box-shadow: 5px 5px 5px grey;
-    border-style: dotted;
-    border-color: grey;
+    border: 2px solid #126b24;
 }
 .green-square:active,
 .green-square.activated {
