@@ -1,12 +1,12 @@
 // declare my variables
-const startButton = document.querySelector('#button1');
+const startButton = document.querySelector('#startButton');
 const allButtons = document.querySelector('.game-buttons');
 const info = document.querySelector('.instructions');
 
 // create computer turn array
-let computerTurn = [];
+let computerMoves = [];
 // create a human turn array
-let playerTurn = [];
+let playerMoves = [];
 //create levels
 let level = 0;
 
@@ -16,8 +16,8 @@ function restartGame(text) {
     alert(text);
     startButton.classList.remove('hidden');
     info.classList.add('hidden'); 
-    computerTurn = [];
-    playerTurn = [];
+    computerMoves = [];
+    playerMoves = [];
     level = 0;
 };
 
@@ -28,19 +28,19 @@ function playerSignal() {
 
 // adding to player's array
 function addColors(evt) {
-    playerTurn.push(evt.target.id);
+    playerMoves.push(evt.target.id);
     compare();
 };
 
 // record users clicks
 function compare() {
-        const index = playerTurn.push() - 1;
-        if (playerTurn[index] !== computerTurn[index]) {
+        const index = playerMoves.push() - 1;
+        if (playerMoves[index] !== computerMoves[index]) {
             restartGame('GAME OVER!!');
             return;
         }
-        else if (playerTurn.length === computerTurn.length) {
-            if (playerTurn.length === 3) {
+        else if (playerMoves.length === computerMoves.length) {
+            if (playerMoves.length === 3) {
                 restartGame('You Win!');
             }
             else {setTimeout(() => {
@@ -67,9 +67,9 @@ function activateButton(color) {
     
 };
 
-// iterating over the computerTurn array
-function showRound(nextComputerTurn) {
-    nextComputerTurn.forEach((color, index) => {
+// iterating over the computerMoves array
+function showRound(nextcomputerMoves) {
+    nextcomputerMoves.forEach((color, index) => {
         // adding delay so buttons are pressed sequentially
         setTimeout(() => {
           activateButton(color);
@@ -77,7 +77,7 @@ function showRound(nextComputerTurn) {
       });
 };
 
-// computerTurn Logic
+// computerMoves Logic
 // randomizing the button selection
 function randomButtonPicker() {
     const gameButtons = ['red', 'green', 'blue', 'yellow'];
@@ -92,12 +92,12 @@ function nextLevel() {
     info.classList.remove('hidden');
     info.textContent = 'Watch';
 
-    playerTurn = [];
-    const nextComputerTurn = [...computerTurn];
-    nextComputerTurn.push(randomButtonPicker());
-    showRound(nextComputerTurn);
+    playerMoves = [];
+    const nextcomputerMoves = [...computerMoves];
+    nextcomputerMoves.push(randomButtonPicker());
+    showRound(nextcomputerMoves);
 
-    computerTurn = [...nextComputerTurn];
+    computerMoves = [...nextcomputerMoves];
 };
 
 // beginning the game
