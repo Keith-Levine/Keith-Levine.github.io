@@ -1,6 +1,6 @@
 // declare my variables
 const startButton = document.querySelector('#button1');
-const allButtons = document.querySelector('.game-buttons')
+const allButtons = document.querySelector('.game-buttons');
 
 // create computer turn array
 let computerTurn = [];
@@ -22,7 +22,7 @@ function restartGame(text) {
 function addColors(evt) {
     playerTurn.push(evt.target.id);
     compare();
-}
+};
 
 // record users clicks
 function compare() {
@@ -39,8 +39,8 @@ function compare() {
               nextLevel();
             }, 1000);
             return;
-        }
-    }
+        };
+    };
 };
 
 
@@ -77,12 +77,12 @@ function randomButtonPicker() {
 function nextLevel() {
     level += 1;
 
-    playerTurn = []
+    playerTurn = [];
     const nextComputerTurn = [...computerTurn];
     nextComputerTurn.push(randomButtonPicker());
     showRound(nextComputerTurn);
 
-    computerTurn = [...nextComputerTurn]
+    computerTurn = [...nextComputerTurn];
 };
 
 // beginning the game
