@@ -4,7 +4,7 @@ General Assembly Project #1
 
 <h2>Overview</h2>
 
-The objective of this project was to use our skills in HTML, CSS, and JavaScript to create a game that using DOM manipulation. 
+The objective of this project was to use our skills in HTML, CSS, and JavaScript to create a game that uses DOM manipulation. 
 
 <h2>User Stories</h2>
 
