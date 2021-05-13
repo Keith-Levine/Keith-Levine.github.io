@@ -28,6 +28,7 @@ h1 {
     border-style: dotted;
     border-color: grey;
 }
+
 .yellow-square:active,
 .yellow-square.activated {
     background-color: grey;

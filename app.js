@@ -2,7 +2,7 @@
 const startButton = document.querySelector('#startButton');
 const allButtons = document.querySelector('.game-buttons');
 const info = document.querySelector('.instructions');
-const timeIntervalOfOneMove = 500
+const timeIntervalOfOneMove = 750
 
 // create computer turn array
 let computerMoves = [];
@@ -25,11 +25,13 @@ function restartGame(text) {
 // signaling the player's turn to click
 function playerSignal() {
     info.textContent = `Level ${level}: ${level} click(s)`;
-}
+};
 
 // adding to player's array
 function addColors(evt) {
     playerMoves.push(evt.target.id);
+    const sound = document.querySelector(`[buttonSound='${evt.target.id}']`)
+    sound.play();
     compare();
 };
 
@@ -41,7 +43,7 @@ function compare() {
             return;
         }
         else if (playerMoves.length === computerMoves.length) {
-            if (playerMoves.length === 3) {
+            if (playerMoves.length === 10) {
                 restartGame('You Win!');
             }
             else {setTimeout(() => {
@@ -55,8 +57,10 @@ function compare() {
 // activating the buttons for the user to see
 function activateButton(color) {
     const button = document.getElementById(`${color}`);
-// play sound
+    const sound = document.querySelector(`[buttonSound='${color}']`)
+// playsound
     button.classList.add('activated');
+    sound.play();
 
     setTimeout(() => {
         button.classList.remove('activated');
@@ -74,7 +78,7 @@ function showRound(nextComputerMoves) {
     const numberOfMoves = nextComputerMoves.length + 1
     setTimeout(() => {
         playerSignal();
-    }, (numberOfMoves * timeIntervalOfOneMove));
+        }, (numberOfMoves * timeIntervalOfOneMove));
 };
 
 // computerMoves Logic
