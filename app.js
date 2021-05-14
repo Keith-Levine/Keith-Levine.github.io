@@ -39,13 +39,15 @@ function addColors(evt) {
 function compare() {
         const index = playerMoves.push() - 1;
         const sound = document.getElementById('end')
+        const win = document.getElementById('win')
         if (playerMoves[index] !== computerMoves[index]) {
             sound.play();
             restartGame('GAME OVER!!');
             return;
         }
         else if (playerMoves.length === computerMoves.length) {
-            if (playerMoves.length === 5) {
+            if (playerMoves.length === 3) {
+                win.play();
                 restartGame('You Win!');
             }
             else {setTimeout(() => {
