@@ -20,4 +20,4 @@ As a user, I should be able to restart the game after it ends
 
 <h2>Game Link</h2>
 
-[Simon Game](https://enigmatic-everglades-87572.herokuapp.com/)
+[Simon Game](https://keith-levine.github.io/)
