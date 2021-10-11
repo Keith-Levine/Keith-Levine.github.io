@@ -98,7 +98,7 @@ function nextLevel() {
     level += 1;
 
     info.classList.remove('hidden');
-    info.textContent = 'Memorize';
+    info.textContent = 'Memorize!';
 
     playerMoves = [];
     const nextComputerMoves = [...computerMoves];
