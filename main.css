@@ -17,12 +17,12 @@ h1 {
 
 .game-buttons {
     display: grid;
-    grid-template-rows: 200px 200px;
-    grid-template-columns: 200px 200px;
-    grid-gap: 20px;
+    grid-template-rows: 40vh 40vh;
+    grid-template-columns: 40vh 40vh;
+    grid-gap: 0px;
     position: relative;
     justify-content: center;
-    background-image: url(https://is5-ssl.mzstatic.com/image/thumb/Purple128/v4/37/3c/42/373c4288-94b4-1d2d-ce5a-c9bdaae75d4e/source/512x512bb.jpg);
+    /* background-image: url(https://is5-ssl.mzstatic.com/image/thumb/Purple128/v4/37/3c/42/373c4288-94b4-1d2d-ce5a-c9bdaae75d4e/source/512x512bb.jpg); */
     background-size: contain;
     background-position: center;
 }
