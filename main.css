@@ -2,14 +2,14 @@ body {
     background-color: aqua;
 }
 
-header {
+/* header {
     background-color: rgb(226, 183, 43);
-}
+} */
 
-h1 {
+/* h1 {
     display: flex;
     justify-content: center;
-}
+} */
 
 .hidden {
     display: none !important;
@@ -17,9 +17,9 @@ h1 {
 
 .game-buttons {
     display: grid;
-    grid-template-rows: 40vh 40vh;
-    grid-template-columns: 40vh 40vh;
-    grid-gap: 10px;
+    grid-template-rows: 44vh 44vh;
+    grid-template-columns: 49vw 49vw;
+    grid-gap: 7px;
     position: relative;
     justify-content: center;
     /* background-image: url(https://is5-ssl.mzstatic.com/image/thumb/Purple128/v4/37/3c/42/373c4288-94b4-1d2d-ce5a-c9bdaae75d4e/source/512x512bb.jpg); */
