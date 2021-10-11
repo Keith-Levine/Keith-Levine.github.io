@@ -19,7 +19,7 @@ h1 {
     display: grid;
     grid-template-rows: 40vh 40vh;
     grid-template-columns: 40vh 40vh;
-    grid-gap: 0px;
+    grid-gap: 10px;
     position: relative;
     justify-content: center;
     /* background-image: url(https://is5-ssl.mzstatic.com/image/thumb/Purple128/v4/37/3c/42/373c4288-94b4-1d2d-ce5a-c9bdaae75d4e/source/512x512bb.jpg); */
@@ -28,50 +28,50 @@ h1 {
 }
 
 .yellow-square {
-    background-color: yellow;
+    background-color: rgb(135, 135, 4);
     border-radius: 25%;
     box-shadow: 5px 5px 5px grey;
-    border: 2px solid #b8f00f;
+    border: 2px solid rgb(108, 108, 4);
 }
 
 .yellow-square:active,
 .yellow-square.activated {
-    background-color: grey;
+    background-color: yellow;
 }
 
 .red-square {
-    background-color: red;
+    background-color: rgb(159, 1, 1);
     border-radius: 25%;
     box-shadow: 5px 5px 5px grey;
-    border: 2px solid #e01111;
+    border: 2px solid rgb(177, 14, 14);
 }
 
 .red-square:active,
 .red-square.activated {
-    background-color: grey;
+    background-color: red;
 }
 
 .blue-square {
-    background-color: blue;
+    background-color: rgb(1, 1, 159);
     border-radius: 25%;
     box-shadow: 5px 5px 5px grey;
-    border: 2px solid #2917d1;
+    border: 2px solid rgb(2, 2, 120);
 }
 
 .blue-square:active,
 .blue-square.activated {
-    background-color: grey;
+    background-color: blue;
 }
 
 .green-square {
-    background-color: green;
+    background-color: rgb(2, 86, 2);
     border-radius: 25%;
     box-shadow: 5px 5px 5px grey;
-    border: 2px solid #126b24;
+    border: 2px solid rgb(2, 70, 2);
 }
 .green-square:active,
 .green-square.activated {
-    background-color: grey;
+    background-color: green;
 }
 
 .users {
