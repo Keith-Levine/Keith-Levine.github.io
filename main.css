@@ -31,7 +31,7 @@ body {
     background-color: rgb(135, 135, 4);
     border-radius: 25%;
     box-shadow: 5px 5px 5px grey;
-    border: 2px solid rgb(108, 108, 4);
+    border: 2px solid rgb(138, 138, 3);
 }
 
 .yellow-square:active,
@@ -69,6 +69,7 @@ body {
     box-shadow: 5px 5px 5px grey;
     border: 2px solid rgb(2, 70, 2);
 }
+
 .green-square:active,
 .green-square.activated {
     background-color: green;
