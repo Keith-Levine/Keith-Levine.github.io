@@ -2,15 +2,6 @@ body {
     background-color: aqua;
 }
 
-/* header {
-    background-color: rgb(226, 183, 43);
-} */
-
-/* h1 {
-    display: flex;
-    justify-content: center;
-} */
-
 .hidden {
     display: none !important;
 }
@@ -19,19 +10,20 @@ body {
     display: grid;
     grid-template-rows: 44vh 44vh;
     grid-template-columns: 49vw 49vw;
-    grid-gap: 7px;
+    grid-gap: 3px;
     position: relative;
     justify-content: center;
-    /* background-image: url(https://is5-ssl.mzstatic.com/image/thumb/Purple128/v4/37/3c/42/373c4288-94b4-1d2d-ce5a-c9bdaae75d4e/source/512x512bb.jpg); */
     background-size: contain;
     background-position: center;
 }
 
 .yellow-square {
-    background-color: rgb(135, 135, 4);
-    border-radius: 25%;
-    box-shadow: 5px 5px 5px grey;
-    border: 2px solid rgb(138, 138, 3);
+    background-color: #84f14e;
+    display:inline-block;
+    padding:0.3em 1.2em;
+    margin:0 0.1em 0.1em 0;
+    border:0.16em solid rgba(255,255,255,0);
+    border-radius: 15%;
 }
 
 .yellow-square:active,
@@ -40,10 +32,12 @@ body {
 }
 
 .red-square {
-    background-color: rgb(159, 1, 1);
-    border-radius: 25%;
-    box-shadow: 5px 5px 5px grey;
-    border: 2px solid rgb(177, 14, 14);
+    background-color: #f14e4e;
+    display:inline-block;
+    padding:0.3em 1.2em;
+    margin:0 0.1em 0.1em 0;
+    border:0.16em solid rgba(255,255,255,0);
+    border-radius: 15%;
 }
 
 .red-square:active,
@@ -52,10 +46,12 @@ body {
 }
 
 .blue-square {
-    background-color: rgb(1, 1, 159);
-    border-radius: 25%;
-    box-shadow: 5px 5px 5px grey;
-    border: 2px solid rgb(2, 2, 120);
+    background-color: #4e9af1;
+    display:inline-block;
+    padding:0.3em 1.2em;
+    margin:0 0.1em 0.1em 0;
+    border:0.16em solid rgba(255,255,255,0);
+    border-radius: 15%;
 }
 
 .blue-square:active,
@@ -64,10 +60,12 @@ body {
 }
 
 .green-square {
-    background-color: rgb(2, 86, 2);
-    border-radius: 25%;
-    box-shadow: 5px 5px 5px grey;
-    border: 2px solid rgb(2, 70, 2);
+    background-color: #4ef18f;
+    display:inline-block;
+    padding:0.3em 1.2em;
+    margin:0 0.1em 0.1em 0;
+    border:0.16em solid rgba(255,255,255,0);
+    border-radius: 15%;
 }
 
 .green-square:active,
