@@ -2,7 +2,7 @@
 const startButton = document.querySelector('#startButton');
 const allButtons = document.querySelector('.game-buttons');
 const info = document.querySelector('.instructions');
-const timeIntervalOfOneMove = 1000;
+const timeIntervalOfOneMove = 750;
 
 // create computer turn array
 let computerMoves = [];
@@ -46,7 +46,7 @@ function compare() {
             return;
         }
         else if (playerMoves.length === computerMoves.length) {
-            if (playerMoves.length === 3) {
+            if (playerMoves.length === 10) {
                 win.play();
                 restartGame('You Win!');
             }
