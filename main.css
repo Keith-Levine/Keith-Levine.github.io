@@ -19,7 +19,7 @@ body {
     display: grid;
     grid-template-rows: 44vh 44vh;
     grid-template-columns: 49vw 49vw;
-    grid-gap: 7px;
+    grid-gap: 3px;
     position: relative;
     justify-content: center;
     /* background-image: url(https://is5-ssl.mzstatic.com/image/thumb/Purple128/v4/37/3c/42/373c4288-94b4-1d2d-ce5a-c9bdaae75d4e/source/512x512bb.jpg); */
@@ -31,7 +31,7 @@ body {
     background-color: rgb(135, 135, 4);
     border-radius: 25%;
     box-shadow: 5px 5px 5px grey;
-    border: 2px solid rgb(138, 138, 3);
+    /* border: 2px solid rgb(138, 138, 3); */
 }
 
 .yellow-square:active,
@@ -43,7 +43,7 @@ body {
     background-color: rgb(159, 1, 1);
     border-radius: 25%;
     box-shadow: 5px 5px 5px grey;
-    border: 2px solid rgb(177, 14, 14);
+    /* border: 2px solid rgb(177, 14, 14); */
 }
 
 .red-square:active,
@@ -55,7 +55,7 @@ body {
     background-color: rgb(1, 1, 159);
     border-radius: 25%;
     box-shadow: 5px 5px 5px grey;
-    border: 2px solid rgb(2, 2, 120);
+    /* border: 2px solid rgb(2, 2, 120); */
 }
 
 .blue-square:active,
